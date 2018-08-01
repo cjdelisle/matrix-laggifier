@@ -6,11 +6,12 @@ Matrix isn't slow, it's special. And this special bot can help you find out just
 
 ## How to use
 
-1. Make an account for the bot on a matrix server
-2. curl your matrix server with the user and password to get the auth token:
+1. npm install
+2. Make an account for the bot on a matrix server
+3. curl your matrix server with the user and password to get the auth token:
   ```curl -XPOST -d '{"type":"m.login.password", "user":"BOT_USER_NAME", "password":"BOT_PASSWORD"}' "https://localhost:8448/_matrix/client/r0/login"'```
-3. `cp ./config.example.js ./config.js`
-4. Edit config.js
+4. `cp ./config.example.js ./config.js`
+5. Edit config.js
     * **baseUrl**: The URL of your matrix homeserver
     * **userName**: The full name of your bot
     * **accessToken**: Your bot's access token
@@ -20,7 +21,7 @@ Matrix isn't slow, it's special. And this special bot can help you find out just
     * **bridgeHostRegex**: For checking whether a user is from matrix, for freenode/matrix.org use `/gateway\/shell\/matrix\.org/`
     * **ircServerHost**: The hostname of the IRC server
     * **ircNick**: Nickname for your bot on IRC side
-5. `node ./index.js 2>&1 > /dev/null &  # Where logs belong` 
+6. `node ./index.js 2>&1 > /dev/null &  # Where logs belong` 
 
 Then wait for a minute for it to pingpong at least once and then you will be able to use the
 trigger `!lag` to get a lag report.
