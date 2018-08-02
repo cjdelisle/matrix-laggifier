@@ -9,6 +9,7 @@ const Bintrees = require('bintrees');
 const Config = require('./config.js');
 
 const EXPIRE_AFTER_MS = 1000 * 60 * 10;
+const PING_CYCLE = 1000 * 60;
 
 const main = () => {
 
@@ -123,7 +124,12 @@ const main = () => {
         setInterval(() => {
             clearExpired();
             client.sendTextMessage(pingPongChan.roomId, "_PING_" + addPing() + '_');
-        }, 60000);
+            const now = +new Date();
+            Object.keys(outstanding).forEach((x) => {
+                if (now - outstanding[x].date < EXPIRE_AFTER_MS) { return; }
+                delete outstanding[x];
+            });
+        }, PING_CYCLE);
     }).nThen((w) => {
         console.log("Done");
         //client.stopClient();

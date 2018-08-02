@@ -2,7 +2,7 @@
   "name": "matrix-laggifier",
   "version": "1.0.0",
   "description": "Bot to periodically check Matrix/IRC lag and provide it on demand",
-  "main": "index.js",
+  "main": "laggifier.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
