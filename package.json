@@ -19,6 +19,7 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "bintrees": "^1.0.2",
+    "irc": "^0.5.2",
     "jshint": "^2.9.6",
     "matrix-js-sdk": "*",
     "nthen": "^0.1.7"
