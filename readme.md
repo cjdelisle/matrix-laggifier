@@ -1,5 +1,7 @@
 # Matrix Laggifier
 
+Status: unmaintained/ran-when-parked - message me @cjd@mastodon.social if you would like to take over
+
 ![](https://raw.github.com/cjdelisle/matrix-laggifier/master/they_waitin.jpeg)
 
 Matrix isn't slow, it's special. And this special bot can help you find out just how special your matrix/irc bridge really is.
